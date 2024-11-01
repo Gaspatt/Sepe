@@ -1,21 +1,28 @@
 <script>
 import { Bar } from 'vue-chartjs'
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
+import Footer from './FoHead/Footer.vue'
+import Header from './FoHead/Header.vue'
+import Planta from '@/assets/imagens/planta.webp'
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
 export default {
   name: 'BarChart',
-  components: { Bar },
+  components: { 
+    Bar,
+    Footer,
+    Header
+  },
   data() {
     return {
       chartData: {
-        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'], // Seus rótulos
+        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
         datasets: [
           {
             label: 'Dados do Gráfico',
-            backgroundColor: ['#88b257', '#4a701c', '#486623', '#284703', '#434d36'], // Cores das barras
-            data: [30, 45, 100, 70, 65] // Seus dados
+            backgroundColor: ['#88b257', '#4a701c', '#486623', '#284703', '#434d36'],
+            data: [30, 45, 100, 70, 65]
           }
         ]
       },
@@ -34,32 +41,51 @@ export default {
     }
   }
 }
-
 </script>
 
 <template>
-  <div class="grafico-container">
-    <div class="grafico">
-      <Bar
-        id="my-chart-id"
-        :options="chartOptions"
-        :data="chartData"
-      />
+  <div class="page-container">
+    <Header />
+    <div class="grafico-container">
+      <div class="grafico">
+        <Bar
+          id="my-chart-id"
+          :options="chartOptions"
+          :data="chartData"
+        />
+      </div>
     </div>
+
+    
+
+    <Footer />
   </div>
 </template>
 
 <style scoped>
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative; /* Adicionado */
+}
+
 .grafico-container {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh; /* Isso fará com que o container ocupe toda a altura da viewport */
+  margin-bottom: 300px; /* Adicionado espaço entre o gráfico e o footer */
+  padding: 20px; /* Adicionado padding para melhor espaçamento */
 }
 
 .grafico {
   width: 500px; 
   height: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: adiciona uma sombra suave */
+  padding: 20px; /* Opcional: adiciona um padding interno */
+  background-color: white; /* Opcional: garante um fundo branco */
+  border-radius: 8px; /* Opcional: adiciona bordas arredondadas */
 }
 </style>

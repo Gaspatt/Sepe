@@ -88,10 +88,12 @@ nav {
 
 footer {
   bottom: 0;
-  background-color: #000000ff;
+  background-color: #E6D6AC;
   position: absolute;
   width: 100%;
   min-height: 250px;
+  border: 7px solid #65b307;
+  border-radius: 1px;
 }
 
 .container {
@@ -113,7 +115,7 @@ footer {
 .col {
   margin-top: 5vh;
   min-width: 250px;
-  color: #f2f2f2f2;
+  color: #000000f2;
   font-family: poppins;
   padding: 0 2rem;
 }
@@ -124,7 +126,7 @@ footer {
 }
 
 .col h3 {
-  color: #ff014fff;
+  color: rgb(11, 91, 4);
   margin-bottom: 20px;
   position: relative;
   cursor: pointer;
@@ -134,7 +136,7 @@ footer {
   content: '';
   height: 3px;
   width: 0px;
-  background-color: #ff014fff;
+  background-color: rgb(11, 91, 4);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -147,7 +149,7 @@ footer {
 }
 
 .col .social a i {
-  color: #ff014fff;
+  color: rgb(11, 91, 4);
   margin-top: 2rem;
   margin-right: 5px;
   transition: 0.3s ease;
@@ -161,7 +163,7 @@ footer {
 .col .links a {
   display: block;
   text-decoration: none;
-  color: #f2f2f2;
+  color: #000000;
   margin-bottom: 5px;
   position: relative;
   transition: 0.3s ease;
@@ -174,7 +176,7 @@ footer {
   position: absolute;
   top: 5px;
   left: -10px;
-  background-color: #ff014fff;
+  background-color: rgb(33, 29, 30);
   transition: 0.5s ease;
   opacity: 0;
 }
@@ -185,7 +187,7 @@ footer {
 
 .col .links a:hover {
   transform: translateX(-8px);
-  color: #ff014fff;
+  color: rgb(0, 0, 0);
 }
 
 .col .contact-details {
@@ -221,7 +223,7 @@ footer {
   border-radius: 6px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  background-color: #ff014fff;
+  background-color: rgb(0, 0, 0);
 }
 
 /* Responsive Design */
