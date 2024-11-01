@@ -1,12 +1,12 @@
 <script setup>
-import graficos from  '@/components/Graficos.vue'
+import pgraficos from  '@/views/Pagina do Grafico.vue'
 
 
 </script>
 
 <template>
 
-<graficos />
+<pgraficos />
      
 </template>
 

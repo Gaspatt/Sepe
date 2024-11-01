@@ -34,12 +34,15 @@ export default {
     }
   }
 }
+
 </script>
 
 <template>
-  <Bar
-    id="my-chart-id"
-    :options="chartOptions"
-    :data="chartData"
-  />
+  <div style="width: 500px; height: 300px;">
+    <Bar
+      id="my-chart-id"
+      :options="chartOptions"
+      :data="chartData"
+    />
+  </div>
 </template>

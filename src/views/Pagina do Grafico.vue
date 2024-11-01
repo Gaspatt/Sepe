@@ -3,7 +3,7 @@
   </template>
   
   <script>
-  import BarChart from 'path/to/component/BarChart'
+  import BarChart from '@/components/Graficos.vue'
   
   export default {
     name: 'App',
